@@ -19,15 +19,18 @@ nav{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: gold;
+    justify-content: space-between;
+    position: fixed;
+
 }
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
-    height: 80%;
+    width: 100%;
+    height: 30%;
+    /* background-color: tomato; */
+    padding: 30px;
 }
 .navbar a{
     text-decoration: none;
@@ -47,9 +50,13 @@ nav{
     height: 40px;
     width: 40px;
 }
-#diocese{
-    height: 40px;
-    width: 35px;
+.pd{
+  /* background-color: aqua; */
+  width: 70%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @keyframes pulse-animation {
   0% {
@@ -61,5 +68,15 @@ nav{
   }
   100% {
     transform: scale(1);
+  }
+}
+@media(max-width: 450px){
+  .pd a{
+    font-size: 12px;
+  }
+}
+@media(max-width: 390px){
+  .pd a{
+    font-size: 9px;
   }
 }
