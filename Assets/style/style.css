@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root {
+  --cor-branco: rgb(255, 255, 255);     /*cor de fundo principal ou textos em cima de cores fortes. */
+  --cor-vermelho: rgb(180, 38, 43);     /* para destaques, links ou mensagens importantes */
+  --cor-azul: rgb(31, 90, 157);         /* como cores de fundo de seções (por exemplo, agenda ou sobre). */
+  --cor-verde: rgb(43, 142, 63);        /*  como cores de fundo de seções (por exemplo, agenda ou sobre) */
+  --cor-dourado: rgb(184, 144, 62);      /* para detalhes, botões e ícones religiosos. */
+  --cor-marrom-escuro: rgb(99, 58, 29); /* para títulos ou elementos de contraste. */
+}
+body{
+    background: white;
+}
+nav{
+    background: linear-gradient( to right , rgb(31, 90, 157), rgb(180, 38, 43));
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 80%;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.navbar a:hover{
+    transform: scale(1.05);
+}
+.navbar a:active{
+    animation: pulse-animation 2s;
+}
+.navbar img{
+    height: 40px;
+    width: 40px;
+}
+#diocese{
+    height: 40px;
+    width: 35px;
+}
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

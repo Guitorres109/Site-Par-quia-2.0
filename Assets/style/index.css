@@ -1,0 +1,161 @@
+:root {
+  --cor-branco: rgb(255, 255, 255);     /*cor de fundo principal ou textos em cima de cores fortes. */
+  --cor-vermelho: rgb(180, 38, 43);     /* para destaques, links ou mensagens importantes */
+  --cor-azul: rgb(31, 90, 157);         /* como cores de fundo de seções (por exemplo, agenda ou sobre). */
+  --cor-verde: rgb(43, 142, 63);        /*  como cores de fundo de seções (por exemplo, agenda ou sobre) */
+  --cor-dourado: rgb(184, 144, 62);      /* para detalhes, botões e ícones religiosos. */
+  --cor-marrom-escuro: rgb(99, 58, 29); /* para títulos ou elementos de contraste. */
+}
+.titulo{
+    display: flex;
+    /* background-color: aqua; */
+    height: 400px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.titulo h1{
+    color: white;
+    text-align: center;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    color: rgb(201, 186, 100);
+}
+.titulo p{
+    color: white;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.t1{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom , rgba(255, 255, 255, 0) , rgba(255, 255, 255, 0) , rgb(99, 58, 29)) , url(../images/paroquia2.jpg);
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size: cover; /* Faz a imagem preencher todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+}
+.navegacao{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: var(--cor-marrom-escuro);
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    width: 90%;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.356);
+    border: solid rgb(0, 0, 0) 2px;
+    border-radius: 60px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+.noticias{
+    padding: 20px;
+    background: linear-gradient( to bottom , rgb(31, 90, 157), rgb(14, 42, 74));
+    width: 20%;
+    height: 90%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.341);
+    border: outset white 2px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.noticias img{
+    /* margin-top: -20px; */
+    border-radius: 30px;
+}
+.noticias:hover{
+    transform: scale(1.03);
+}
+.conteudo{
+    margin-top: 40px;
+    /* background-color: brown; */
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.conteudo h2{
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+.conteudo p{
+    color: white;
+}
+
+#botao {
+    margin-top: 40px;
+    text-align: center;
+}
+#botao button{
+    background-color: var(--cor-vermelho);
+    height: 50px;
+    width: 50%;
+    border: none;
+    border-radius: 50px;
+    border: solid black 2px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+#botao button:hover{
+    background-color: var(--cor-verde); 
+    transform: scale(1.05); 
+}
+#botao button:active{
+    animation: pulse-animation 2s;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media(max-width:1200px){
+    .titulo h1{
+        font-size: 40px;
+    }
+    .titulo p{
+        text-align: center;
+    }
+    .container{
+        flex-direction: column;
+        gap: 50px;
+        border: 0;
+    }
+    .noticias{
+        width: 80%;
+    }
+    .container{
+        width: 87%;
+        border-radius: 0;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+    }
+    .navegacao{
+        
+    }
+}
