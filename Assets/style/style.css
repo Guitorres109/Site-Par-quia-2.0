@@ -14,7 +14,7 @@ body{
     background: white;
 }
 nav{
-    background: linear-gradient( to right , rgb(31, 90, 157), rgb(180, 38, 43));
+    background:rgb(31, 90, 157);
     height: 60px;
     width: 100%;
     display: flex;
